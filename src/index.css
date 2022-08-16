@@ -1,3 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+hr{
+  border: 0.5px black solid ;
+  background-color: black;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +20,70 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header{
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  padding: 15px;
+}
+
+.faqs{
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+
+
+.faqs .faq .faq-question{
+  position: relative;
+  font-size: 20px;
+  padding-right: 80px;
+
+  transition: all 0.4s ease;
+}
+
+.faqs .faq .faq-question::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+
+  background-image: url(./Arrow-down.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transition: all 0.4s ease-out;
+}
+
+.faqs .faq .faq-reponse{
+  margin: 0 10px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4S ease;
+}
+
+.faqs .faq.ouvert .faq-question{
+  margin-bottom: 15px;
+}
+
+.faqs .faq.ouvert .faq-question::after{
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faqs .faq.ouvert .faq-reponse{
+  max-height: 1000px;
+  opacity: 1;
+}
+
+hr{
+  margin: 15px 0 ;
 }
