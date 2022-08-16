@@ -3,11 +3,6 @@ import Header from "./Header";
 import FAQ from "./FAQ";
 
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then((response) => {
-    console.log(response.json())
-  })
-
 
 function App() {
   
